@@ -4,14 +4,13 @@ document.addEventListener("DOMContentLoaded",init)
 
 function init ()
 {
-    console.log("tesssssst");
     let buttons  = document.querySelectorAll("button");
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
             addDrink(buttons[i])
         });
     }
-    document.getElementById("orders").innerHTML += `<p> ${allStorage()} </p>`
+    //document.getElementById("orders").innerHTML += `<p> ${allStorage()} </p>`
 
 
 }
@@ -35,9 +34,6 @@ function getJson(value)
     let number = parseInt(value)
     if (number === 1)
     {
-        console.log(typeof Date.now())
-
-
         return{
             "name": "bier",
             "date": Date.now(),
@@ -84,7 +80,7 @@ function getPrice(value)
     //crazy berekeningen
     return 1.5;
 }
-let i = 0;      //da gawe dan veranderen met datum van nu
+let i = 1;
 function addDrink(e)
 {
     window.localStorage.setItem(i,JSON.stringify(getJson(e.value)));
