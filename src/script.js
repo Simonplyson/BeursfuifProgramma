@@ -1,5 +1,7 @@
 "use strict";
 
+const INTERVAL = 10000;
+
 document.addEventListener("DOMContentLoaded",init)
 
 function init ()
@@ -13,6 +15,9 @@ function init ()
     showPricesButtons()
     //document.getElementById("orders").innerHTML += `<p> ${allStorage()} </p>`
 
+    window.setTimeout( function() {
+        window.location.reload();
+    }, INTERVAL);
 
 }
 
@@ -81,8 +86,9 @@ function showPricesButtons()
     let prices = JSON.parse(localStorage.getItem("prices"));
     for (let i = 0; i < prices.length; i ++)
     {
-        console.log(prices[i])
-        document.getElementById(i).innerHTML = `${prices[i]}`
+        console.log(prices[i]);
+        document.getElementById(i).innerHTML = `${prices[i]}`;
+        //document.querySelector(i + " + .price").innerHTML= "tesfasdfasd"
     }
 }
 

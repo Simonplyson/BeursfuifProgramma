@@ -51,6 +51,7 @@ function init ()
         console.log(mappedSet)
         calculatePrice(mappedSet);
     }
+    showPrices()
 
 }
 
@@ -71,6 +72,16 @@ function sortData(dataset)  //should return a key(name) value(amount sold) map t
         res.set(el,total);
     })
     return res;
+}
+
+function showPrices()
+{
+    let prices = JSON.parse(localStorage.getItem("prices"));
+    console.log(prices);
+    prices.forEach(el =>
+    {
+        document.getElementById("pricesContainer"). innerHTML += `<p>${el} €</p>`
+    })
 }
 
 function calculatePrice(dataset)
@@ -133,7 +144,9 @@ function initChart()
         data: data,
         options: {
             plugins: {
-                data
+                datalabels :{
+                    display: true
+                }
             }
         }
     };

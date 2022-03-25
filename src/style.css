@@ -4,8 +4,22 @@
     height: 5rem;
     align-content: center;
 }
+#myChart {
+}
 .buttonContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+#pricesContainer {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#pricesContainer p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
