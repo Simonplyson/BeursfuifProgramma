@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc2da338-cb48-40ee-8e1b-5a9b718d24c3" name="Default Changelist" comment="keeps on looking betterrrrrrr">
+    <list default="true" id="dc2da338-cb48-40ee-8e1b-5a9b718d24c3" name="Default Changelist" comment="fuck man die prijsberekening doe moeilijk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648159890680</updated>
       <workItem from="1648159891715" duration="3895000" />
-      <workItem from="1648194572112" duration="13712000" />
+      <workItem from="1648194572112" duration="15719000" />
     </task>
     <task id="LOCAL-00001" summary="ok holy shit dit ga mss nog werken">
       <created>1648162128922</created>
@@ -71,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648198670473</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fuck man die prijsberekening doe moeilijk">
+      <created>1648214447247</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648214447247</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +95,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ok holy shit dit ga mss nog werken" />
     <MESSAGE value="keeps on looking betterrrrrrr" />
-    <option name="LAST_COMMIT_MESSAGE" value="keeps on looking betterrrrrrr" />
+    <MESSAGE value="fuck man die prijsberekening doe moeilijk" />
+    <option name="LAST_COMMIT_MESSAGE" value="fuck man die prijsberekening doe moeilijk" />
   </component>
 </project>

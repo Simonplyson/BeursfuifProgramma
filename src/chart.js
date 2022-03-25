@@ -2,7 +2,7 @@
 
 const FIVE_SECONDS = 5000;
 const MINUTE = 60000;
-const INTERVAL = 5000;
+const INTERVAL = 10000;
 const DRINKS = ["bier","frisdrank","Duvel","cocktail","rodenbach"];
 const ORIGINAL_PRICE = [1.50, 1.40, 2.50, 3.40, 1.60];
 
@@ -11,13 +11,12 @@ document.addEventListener("DOMContentLoaded",init)
 
 function init ()
 {
-    console.log("test")
     if (localStorage.getItem("prices") === null) {
         window.localStorage.setItem("prices", JSON.stringify(ORIGINAL_PRICE));
     }
-    // window.setTimeout( function() {
-    //     window.location.reload();
-    // }, INTERVAL);
+    window.setTimeout( function() {
+        window.location.reload();
+    }, INTERVAL);
 
     function allStorage() {
         let prices = JSON.parse(localStorage.getItem("prices"));
@@ -27,21 +26,32 @@ function init ()
             keys = Object.keys(localStorage),
             i = keys.length;
         while ( i-- ) {
-            let timeLast = Date.now();
+            let timeLast = Date.now() - INTERVAL;
             let itemInJSon = JSON.parse(localStorage.getItem(keys[i]) );
             if (itemInJSon.date >= timeLast)
             {
                 values.push(itemInJSon);
             }
-            values.push(itemInJSon);
         }
         window.localStorage.setItem("prices", JSON.stringify(prices));
         return values;
     }
 
-    let set = allStorage();
-    sortData(set)
-    calculatePrice(set)
+    if (allStorage().length === 0)
+    {
+        console.log("no (new) orders yet")
+        initChart()
+    }
+    else{
+        console.log(JSON.parse(localStorage.getItem("prices")));
+
+        let set = allStorage();
+        console.log(set)
+        let mappedSet = sortData(set);
+        console.log(mappedSet)
+        calculatePrice(mappedSet);
+    }
+
 }
 
 function sortData(dataset)  //should return a key(name) value(amount sold) map to calculate price
@@ -50,18 +60,14 @@ function sortData(dataset)  //should return a key(name) value(amount sold) map t
     const drinks = DRINKS;
     let res = new Map();
 
-    console.log(dataset)
     drinks.forEach(el =>{
         let total = 0
-        let price = 0;
         dataset.forEach(ord => {
             if (ord.name === el)
             {
                 total ++
             }
-            price = ord.price;
         })
-        console.log(price)
         res.set(el,total);
     })
     return res;
@@ -71,32 +77,40 @@ function calculatePrice(dataset)
 {
     console.log("calculatePrice")
 
-    let map = sortData(dataset);
-    let amount = dataset.length;
+    console.log(dataset)
+    let amount = JSON.parse(localStorage.getItem("prices")).length;
+    console.log(amount)
     let average = amount/ DRINKS.length;
     let currentPrices = JSON.parse(localStorage.getItem("prices"));
     let res = [];
-    for (let i = 0; i < map.size; i++)
+    for (let i = 0; i < dataset.size; i++)
     {
-        if ((map.get(DRINKS[i])) > average)
+        // console.log("1: " + (map.get(DRINKS[i])))
+        // console.log("avg: " + average)
+
+        if ((dataset.get(DRINKS[i])) > average)
         {
+            console.log("price up")
             res[i] = (parseFloat(currentPrices[i]) + 0.10).toFixed(2);
             console.log(typeof parseInt(res[i]))
-            //res[i].toFixed(2)
-
         }
-        else if ((map.get(DRINKS[i])) < average)
+        else if ((dataset.get(DRINKS[i])) < average)
         {
+            console.log("price down")
+
             res[i] = (parseFloat(currentPrices[i]) - 0.10).toFixed(2);
         }
         else
         {
+            console.log("price same")
+
             res[i] = (parseFloat(currentPrices[i])).toFixed(2);
         }
     }
+    console.log(res)
     window.localStorage.setItem("prices", JSON.stringify(res));
-    console.log(window.localStorage.getItem("prices"));
-    console.log(res);
+    // console.log(window.localStorage.getItem("prices"));
+    // console.log(res);
     initChart()
 
     return res;
