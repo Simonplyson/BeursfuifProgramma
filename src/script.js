@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",init)
 
 function init ()
 {
-    console.log("test");
+    console.log("tesssssst");
     let buttons  = document.querySelectorAll("button");
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
@@ -28,51 +28,52 @@ function allStorage() {
 
     return values;
 }
-let order =
-    {
-        "name": "bier",
-        "price": 1.5
-    }
+
 
 function getJson(value)
 {
-    if (value === 1)
+    let number = parseInt(value)
+    if (number === 1)
     {
-        return {
+        console.log(typeof Date.now())
+
+
+        return{
             "name": "bier",
-            "date": new Date(),
+            "date": Date.now(),
             "price": getPrice(value)
-        };
+        }
     }
-    else if (value === 2)
+    else if (number === 2)
     {
         return {
             "name":"frisdrank",
-            "date": new Date(),
+            "date": Date.now(),
             "price": getPrice(value)
         }
+
     }
-    else if (value === 3)
+    else if (number === 3)
     {
         return {
             "name":"Duvel",
-            "date": new Date(),
+            "date": Date.now(),
             "price": getPrice(value)
         }
     }
-    else if (value === 4)
+    else if (number === 4)
     {
         return {
             "name":"cocktail",
-            "date": new Date(),
+            "date": Date.now(),
             "price": getPrice(value)
         }
     }
-    else if (value === 5)
+    else if (number === 5)
     {
         return {
             "name":"rodenbach",
-            "date": new Date(),
+            "date": Date.now(),
             "price": getPrice(value)
         }
     }
@@ -86,11 +87,10 @@ function getPrice(value)
 let i = 0;      //da gawe dan veranderen met datum van nu
 function addDrink(e)
 {
-    window.localStorage.setItem(i,JSON.stringify(order));
+    window.localStorage.setItem(i,JSON.stringify(getJson(e.value)));
     console.log(e.innerText)
-    document.getElementById("test").innerHTML += `<p> ${e.innerText} </p>`
+    document.getElementById("justOrdered").innerHTML += `<p> ${e.innerText} </p>`
     let drink = window.localStorage.getItem(i);
-    document.getElementById("test").innerHTML += `<i> ${drink} </i>`
-    document.getElementById("test").innerHTML += `<i> ${i} </i>`
+    document.getElementById("justOrdered").innerHTML += `<i> ${drink} </i>`
     i ++
 }
