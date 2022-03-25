@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded",init)
 
 function init ()
 {
-    let buttons  = document.querySelectorAll("button");
+    let buttons  = document.querySelectorAll(".button");
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
             addDrink(buttons[i])
         });
     }
+    showPricesButtons()
     //document.getElementById("orders").innerHTML += `<p> ${allStorage()} </p>`
 
 
@@ -32,58 +33,70 @@ function allStorage() {
 function getJson(value)
 {
     let number = parseInt(value)
-    if (number === 1)
+    if (number === 0)
     {
         return{
-            "name": "bier",
+            "name": "Bier",
             "date": Date.now(),
-            "price": getPrice(value)
+            "price": getPrice(number)
         }
+    }
+    else if (number === 1)
+    {
+        return {
+            "name":"Frisdrank",
+            "date": Date.now(),
+            "price": getPrice(number)
+        }
+
     }
     else if (number === 2)
     {
         return {
-            "name":"frisdrank",
+            "name":"Duvel",
             "date": Date.now(),
-            "price": getPrice(value)
+            "price": getPrice(number)
         }
-
     }
     else if (number === 3)
     {
         return {
-            "name":"Duvel",
+            "name":"Appelmoes",
             "date": Date.now(),
-            "price": getPrice(value)
+            "price": getPrice(number)
         }
     }
     else if (number === 4)
     {
         return {
-            "name":"cocktail",
+            "name":"Rodenbach",
             "date": Date.now(),
-            "price": getPrice(value)
-        }
-    }
-    else if (number === 5)
-    {
-        return {
-            "name":"rodenbach",
-            "date": Date.now(),
-            "price": getPrice(value)
+            "price": getPrice(number)
         }
     }
 }
 
-function getPrice(value)
+function showPricesButtons()
 {
-    //crazy berekeningen
-    return 1.5;
+    let prices = JSON.parse(localStorage.getItem("prices"));
+    for (let i = 0; i < prices.length; i ++)
+    {
+        console.log(prices[i])
+        document.getElementById(i).innerHTML = `${prices[i]}`
+    }
+}
+
+function getPrice(number)
+{
+    let prices = JSON.parse(localStorage.getItem("prices"));
+    console.log(prices[number]);
+    return prices[number];
 }
 let i = 1;
 function addDrink(e)
 {
-    window.localStorage.setItem(i,JSON.stringify(getJson(e.value)));
+    console.log(e.id);
+    window.localStorage.setItem(i,JSON.stringify(getJson(e.id)));
     console.log(e.innerText)
     document.getElementById("justOrdered").innerHTML += `<p> ${e.innerText} </p>`
     let drink = window.localStorage.getItem(i);

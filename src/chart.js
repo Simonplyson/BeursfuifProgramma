@@ -3,7 +3,7 @@
 const FIVE_SECONDS = 5000;
 const MINUTE = 60000;
 const INTERVAL = 10000;
-const DRINKS = ["bier","frisdrank","Duvel","cocktail","rodenbach"];
+const DRINKS = ["Bier","Frisdrank","Duvel","Appelmoes","Rodenbach"];
 const ORIGINAL_PRICE = [1.50, 1.40, 2.50, 3.40, 1.60];
 
 
@@ -131,7 +131,11 @@ function initChart()
     const config = {
         type: 'bar',
         data: data,
-        options: {}
+        options: {
+            plugins: {
+                data
+            }
+        }
     };
 
     const myChart = new Chart(

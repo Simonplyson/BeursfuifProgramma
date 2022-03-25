@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc2da338-cb48-40ee-8e1b-5a9b718d24c3" name="Default Changelist" comment="fuck man die prijsberekening doe moeilijk">
+    <list default="true" id="dc2da338-cb48-40ee-8e1b-5a9b718d24c3" name="Default Changelist" comment="YOOOOOOO WHAT DAFUUUUUUUUUUUUUUUCK DA WERKT IEREEEE">
+      <change afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/beursfuiftestlocalstorage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/beursfuiftestlocalstorage.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +23,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -38,8 +44,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -52,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648159890680</updated>
       <workItem from="1648159891715" duration="3895000" />
-      <workItem from="1648194572112" duration="15719000" />
+      <workItem from="1648194572112" duration="18951000" />
     </task>
     <task id="LOCAL-00001" summary="ok holy shit dit ga mss nog werken">
       <created>1648162128922</created>
@@ -75,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648214447247</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="YOOOOOOO WHAT DAFUUUUUUUUUUUUUUUCK DA WERKT IEREEEE">
+      <created>1648216669231</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648216669231</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +109,7 @@
     <MESSAGE value="ok holy shit dit ga mss nog werken" />
     <MESSAGE value="keeps on looking betterrrrrrr" />
     <MESSAGE value="fuck man die prijsberekening doe moeilijk" />
-    <option name="LAST_COMMIT_MESSAGE" value="fuck man die prijsberekening doe moeilijk" />
+    <MESSAGE value="YOOOOOOO WHAT DAFUUUUUUUUUUUUUUUCK DA WERKT IEREEEE" />
+    <option name="LAST_COMMIT_MESSAGE" value="YOOOOOOO WHAT DAFUUUUUUUUUUUUUUUCK DA WERKT IEREEEE" />
   </component>
 </project>

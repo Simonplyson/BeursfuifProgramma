@@ -1,0 +1,11 @@
+.button{
+    background-color: lightgray;
+    width: 5rem;
+    height: 5rem;
+    align-content: center;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

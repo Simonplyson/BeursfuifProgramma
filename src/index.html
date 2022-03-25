@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!--
@@ -14,14 +15,36 @@ localStorage.clear();
 
 -->
 <a href="chart.html">chart</a>
-<button value="1">bier</button>
-<button value="2">frisdrank</button>
-<button value="3">Duvel</button>
-<button value="4">cocktail</button>
-<button value="5">rodenbach</button>
-
+<div class="buttonContainer">
+    <div class="button" id="0">
+        <p>Bier</p>
+        <p id="priceBier">asdfadsa</p>
+<!--        <button value="1">Bier</button>-->
+    </div>
+    <div class="button" id="1">
+        <p>Frisdrank</p>
+        <p id="priceFrisdrank"></p>
+        <!--        <button value="1">Frisdrank</button>-->
+    </div>
+    <div class="button" id="2">
+        <p>Duvel</p>
+        <p id="priceDuvel"></p>
+        <!--        <button value="1">Duvel</button>-->
+    </div>
+    <div class="button" id="3">
+        <p>Appelmoes</p>
+        <p id="priceAppelmoes"></p>
+        <!--        <button value="1">Appelmoes</button>-->
+    </div>
+    <div class="button" id="4">
+        <p>Rodenbach</p>
+        <p id="priceRodenbach"></p>
+        <!--        <button value="1">Rodenbach</button>-->
+    </div>
+</div>
 <div id="justOrdered"></div>
 </body>
 <script src="script.js"></script>
+
 
 </html>
