@@ -3,8 +3,9 @@
 const FIVE_SECONDS = 5000;
 const MINUTE = 60000;
 const INTERVAL = 10000;
-const DRINKS = ["Bier","Frisdrank","Duvel","Appelmoes","Rodenbach"];
-const ORIGINAL_PRICE = [1.50, 1.40, 2.50, 3.40, 1.60];
+const DRINKS = ["Bier","Rodenbach","Frisdrank","Duvel","Omer","Bulmer","Somersby","Appelmoes","Jenever"];
+const ORIGINAL_PRICE = [1.50, 1.60, 1.40, 2.50, 2.50, 4.00 ,2.50, 3.40, 2.00];
+const MIN_PRICES = [0.70, 0.80, 0.70, 1.5, 1.5, 2.50, 1.80, 1.80, 1.50]
 
 
 document.addEventListener("DOMContentLoaded",init)
@@ -17,6 +18,8 @@ function init ()
     window.setTimeout( function() {
         window.location.reload();
     }, INTERVAL);
+    //let nextTime = new Date().toISOString() + INTERVAL;
+    //document.getElementById("nextUpdateTime").innerHTML = nextTime
 
     function allStorage() {
         let prices = JSON.parse(localStorage.getItem("prices"));
@@ -96,20 +99,36 @@ function calculatePrice(dataset)
     let res = [];
     for (let i = 0; i < dataset.size; i++)
     {
-        // console.log("1: " + (map.get(DRINKS[i])))
-        // console.log("avg: " + average)
-
+        let cents = 0.10;
+        if ((dataset.get(DRINKS[i]) > average))
+        {
+            let amount = Math.floor((dataset.get(DRINKS[i])) - average);
+            console.log(amount);
+            // for (let i = 0; i < amount; i++)
+            // {
+            //
+            // }
+            cents = cents * amount;
+            console.log(cents)
+        }
         if ((dataset.get(DRINKS[i])) > average)
         {
             console.log("price up")
-            res[i] = (parseFloat(currentPrices[i]) + 0.10).toFixed(2);
+            res[i] = (parseFloat(currentPrices[i]) + cents).toFixed(2);
             console.log(typeof parseInt(res[i]))
         }
         else if ((dataset.get(DRINKS[i])) < average)
         {
             console.log("price down")
 
-            res[i] = (parseFloat(currentPrices[i]) - 0.10).toFixed(2);
+            if (parseFloat(currentPrices[i]) > MIN_PRICES[i])
+            {
+                res[i] = (parseFloat(currentPrices[i]) - 0.10).toFixed(2);
+            }
+            else {
+                res[i] = (parseFloat(currentPrices[i])).toFixed(2);
+
+            }
         }
         else
         {
@@ -134,8 +153,8 @@ function initChart()
     const data = {
         labels: DRINKS,
         datasets: [{
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(0, 167, 255)',
+            borderColor: 'rgb(0, 167, 255)',
             data: dataset,
         }]
     };
@@ -143,10 +162,17 @@ function initChart()
         type: 'bar',
         data: data,
         options: {
-            plugins: {
-                datalabels :{
-                    display: true
-                }
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: 10
+                    }
+                }]
             }
         }
     };

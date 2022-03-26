@@ -22,4 +22,9 @@
     font-size: 2rem;
     font-weight: bold;
 }
+#timeContainer
+{
+    display: flex;
+    flex-direction: row;
+}
 

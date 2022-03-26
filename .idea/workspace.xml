@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc2da338-cb48-40ee-8e1b-5a9b718d24c3" name="Default Changelist" comment="looking gucci">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/beursfuiftestlocalstorage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/beursfuiftestlocalstorage.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
@@ -60,6 +60,7 @@
       <updated>1648159890680</updated>
       <workItem from="1648159891715" duration="3895000" />
       <workItem from="1648194572112" duration="21832000" />
+      <workItem from="1648298832801" duration="7519000" />
     </task>
     <task id="LOCAL-00001" summary="ok holy shit dit ga mss nog werken">
       <created>1648162128922</created>
@@ -112,6 +113,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ok holy shit dit ga mss nog werken" />
@@ -120,5 +122,23 @@
     <MESSAGE value="YOOOOOOO WHAT DAFUUUUUUUUUUUUUUUCK DA WERKT IEREEEE" />
     <MESSAGE value="looking gucci" />
     <option name="LAST_COMMIT_MESSAGE" value="looking gucci" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1648299584258">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/-1920.0.1920.1032/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1648299584258" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1648299584257">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.center/-1920.0.1920.1032/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1648299584257" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1648299584257">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.left/-1920.0.1920.1032/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1648299584257" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1648299584257">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.right/-1920.0.1920.1032/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1648299584257" />
   </component>
 </project>
