@@ -2,6 +2,7 @@
 
 const DRINKS = ["Bier","Rodenbach","Frisdrank","Duvel","Omer","Bulmer","Somersby","Appelmoes","Jenever"];
 const INTERVAL = 1000;
+const MIN_PRICES = [0.70, 0.80, 0.70, 1.5, 1.5, 2.50, 1.80, 1.80, 1.50]
 
 document.addEventListener("DOMContentLoaded",init)
 
@@ -13,6 +14,7 @@ function init ()
             addDrink(buttons[i])
         });
     }
+    //document.getElementById("crash").addEventListener("click", crash);
     showPricesButtons()
     //document.getElementById("orders").innerHTML += `<p> ${allStorage()} </p>`
 
@@ -20,6 +22,20 @@ function init ()
         window.location.reload();
     }, INTERVAL);
 
+}
+
+let crashed = false;
+function crash()
+{
+    crashed = !crashed
+
+    window.localStorage.setItem("crash",JSON.stringify(crashed));
+    if ( JSON.parse(localStorage.getItem("crash") ) === true)
+    {
+        console.log('fdksqljfqkjlsdhbflkjqsdljkhfq')
+        initChart("red", MIN_PRICES);
+    }
+    console.log('yqsdgqsddqsf')
 }
 
 function getJson(value)

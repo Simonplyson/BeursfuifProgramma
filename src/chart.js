@@ -15,6 +15,7 @@ function init ()
     if (localStorage.getItem("prices") === null) {
         window.localStorage.setItem("prices", JSON.stringify(ORIGINAL_PRICE));
     }
+    //document.getElementById("crash").addEventListener("click", crash);
     window.setTimeout( function() {
         window.location.reload();
     }, INTERVAL);
@@ -56,6 +57,11 @@ function init ()
     }
     showPrices()
 
+}
+
+function crash()
+{
+    let pricesBefore = JSON.parse(localStorage.getItem("prices"));
 }
 
 function sortData(dataset)  //should return a key(name) value(amount sold) map to calculate price
@@ -102,7 +108,7 @@ function calculatePrice(dataset)
         let cents = 0.10;
         if ((dataset.get(DRINKS[i]) > average))
         {
-            let amount = Math.floor((dataset.get(DRINKS[i])) - average);
+            let amount = Math.floor(((dataset.get(DRINKS[i])) - average) /2);
             console.log(amount);
             // for (let i = 0; i < amount; i++)
             // {
@@ -146,15 +152,15 @@ function calculatePrice(dataset)
     return res;
 }
 
-function initChart()
+function initChart(color = 'rgb(0, 167, 255)', dataset = JSON.parse(localStorage.getItem("prices") ))
 {
     console.log("initChart")
-    let dataset = JSON.parse(localStorage.getItem("prices") );
+    //let dataset = JSON.parse(localStorage.getItem("prices") );
     const data = {
         labels: DRINKS,
         datasets: [{
-            backgroundColor: 'rgb(0, 167, 255)',
-            borderColor: 'rgb(0, 167, 255)',
+            backgroundColor: color,
+            borderColor: color ,
             data: dataset,
         }]
     };
