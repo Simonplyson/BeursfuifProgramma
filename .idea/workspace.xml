@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc2da338-cb48-40ee-8e1b-5a9b718d24c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/chart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +54,7 @@
       <workItem from="1648159891715" duration="3895000" />
       <workItem from="1648194572112" duration="21832000" />
       <workItem from="1648298832801" duration="9456000" />
+      <workItem from="1652219981972" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="ok holy shit dit ga mss nog werken">
       <created>1648162128922</created>
@@ -154,5 +150,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1032/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1648316109981" />
+    <state x="714" y="417" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1652220051411">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="714" y="417" key="git4idea.remote.GitConfigureRemotesDialog/-1920.0.1920.1032/1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1652220051411" />
   </component>
 </project>
