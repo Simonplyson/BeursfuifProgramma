@@ -35,7 +35,7 @@ function crash()
         console.log('fdksqljfqkjlsdhbflkjqsdljkhfq')
         initChart("red", MIN_PRICES);
     }
-    console.log('yqsdgqsddqsf')
+    console.log('yqsdgqsdssdqsf')
 }
 
 function getJson(value)

@@ -19,7 +19,7 @@ function init ()
     window.setTimeout( function() {
         window.location.reload();
     }, INTERVAL);
-    //let nextTime = new Date().toISOString() + INTERVAL;
+    //let nextTime = new Date().toISOString() - INTERVAL;
     //document.getElementById("nextUpdateTime").innerHTML = nextTime
 
     function allStorage() {
